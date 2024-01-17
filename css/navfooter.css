@@ -18,7 +18,8 @@ nav {
     background: rgba(0, 0, 0, 0.4);
     color: rgb(255, 255, 255);
     position: fixed;
-    z-index: 1; /* Assurez-vous que la barre de navigation est en premier plan */
+    z-index: 1;
+    top: 0; /* Ajoutez cette ligne pour spécifier la position initiale */
     transition: top 0.5s ease;
 }
 
@@ -36,6 +37,10 @@ nav .mainMenu {
     transition: top 1s ease 0s;
     display: none;
     padding: 0; /* Ajout de cette ligne */
+}
+
+nav.showNav {
+    top: -100%; /* Déplacez la barre de navigation vers le haut pour la masquer */
 }
 
 
@@ -92,6 +97,20 @@ nav .logo {
     cursor: pointer;
     text-transform: uppercase;
 }
+
+nav .mainMenu.slideInOut {
+    animation: slideInOut 1s ease;
+}
+
+@keyframes slideInOut {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
 
 /* NAV OPEN MENU */
 
