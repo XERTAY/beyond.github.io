@@ -1,5 +1,4 @@
 .boutique_container {
-    height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -7,6 +6,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    padding: 20px;
 }
 
 .boutique_content {
@@ -67,7 +67,7 @@
     font-size: 1.5rem;
 }
 
-#price 
+.price 
 {
     font-size: 3rem;
     font-weight: 600;
@@ -190,7 +190,7 @@ a{
     .boutique_style p {
         font-size: 1rem;
     }
-    #price {
+    .price  {
         font-size: 1.5rem;
     }
 }
