@@ -134,6 +134,7 @@ nav .mainMenu.slideInOut {
 /* Down To Up */
 
 .DownToUp {
+    display: none;
     position: fixed;
     top: calc(100% - 110px); /* Ajustez la valeur selon vos besoins */
     right: 20px;
@@ -179,8 +180,9 @@ footer {
 
 footer h2 {
     font-size: 4rem;
-    margin-top: 0; /* Supprimer la marge par défaut du h2 */
+    margin-top: 20px;
     padding-left: 20px;
+    grid-column: span 2;
 }
 
 .boutons {
@@ -213,12 +215,6 @@ button {
     padding-right: 20px;
 }
 
-.inputs input
-{
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
 .inputs :last-child {
     height: 200px;
 }
@@ -227,11 +223,12 @@ input {
     display: block;
     width: 800px;
     height: 50px;
-    border:3px solid #ffffff;
-    background-color:transparent;
-    color:#ffffff;
+    border: 3px solid #ffffff;
+    background-color: transparent;
+    color: #ffffff;
     font-size: 2rem;
-    
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .separator {
@@ -294,8 +291,40 @@ input {
 
 @media (max-width: 600px)
 {
+    footer {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3,auto);
+        gap :0;
+    }
+
     footer h2 {
-        grid-column: span 2;
         font-size: 2rem;
+        grid-row: 1;
+    }
+
+    .boutons {
+        grid-column: 1;
+        display: flex;
+        flex-direction: row;
+        padding: 10px;
+        grid-row: 2;
+      }
+    .boutons a {
+        display: inline-block;
+        width: auto;
+        height: auto;
+        text-align: center;
+        margin: 2px;
+    }
+    .inputs {
+        grid-column: 1;
+        grid-row: 3;
+        padding: 0;
+    }
+}
+
+@media (max-width:1500px) {
+    input {
+        width: 100%;
     }
 }

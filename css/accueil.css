@@ -266,10 +266,3 @@
     }
     
 }
-
-@media (max-width:1500px) {
-    .img_container p
-    {
-        font-size: 2rem;
-    }
-}
