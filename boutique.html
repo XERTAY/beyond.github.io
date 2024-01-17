@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/navfooter.css">
+    <link rel="stylesheet" href="css/boutique.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <div class="openMenu">
+            <button>
+                <p>&#x2630</p>
+            </button>
+        </div>
+
+        <ul class="mainMenu">
+            <li><a href="./index.html">Accueil</a></li>
+            <li><a href="#">Logiciels</a></li>
+            <li><a href="#">Jeu</a></li>
+            <li><a href="./boutique.html">Boutique</a></li>
+            <li><a href="#">A Propos</a></li>
+            <div class="closeMenu"><p>&#x2716</p></div>
+            <span class="icons">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-brands fa-x-twitter"></i>
+                <i class="fab fa-github"></i>
+            </span>
+        </ul>
+    </nav>
+
+    <div class="boutique_container">
+        <div class="boutique_content">
+            <h2>Notre boutique de jeu en ligne</h2>
+            <div class="boutique_items">
+                <div class="boutique_style">
+                    <img src="images/e-coins.png" alt="">
+                    <h3>Product</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis fugit rerum voluptates fuga deserunt suscipit, ad eligendi magni nam ab.</p>
+                    <p id="price">000,00 €</p>
+                    <a class="buy_button" href="#">Acheter</a>
+                </div>
+            </div>
+            <div class="boutique_items">
+                <div class="boutique_style">
+                    <img src="images/e-coins.png" alt="">
+                    <h3>Product</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur quasi iusto assumenda dolore exercitationem aliquam sed, fugiat saepe dolorum accusamus.</p>
+                    <p id="price">000,00 €</p>
+                    <a class="buy_button" href="#">Acheter</a>
+                </div>
+            </div>
+            <div class="boutique_items">
+                <div class="boutique_style">
+                    <img src="images/e-coins.png" alt="">
+                    <h3>Product</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, sapiente impedit illum dignissimos molestias doloremque neque corporis non enim quo. Ullam aliquid, aut cum vel minus placeat cupiditate? Autem, rerum?</p>
+                    <p id="price">000,00 €</p>
+                    <a class="buy_button" href="#">Acheter</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="boutique_separator">
+        <a class="ScrollArrow" onclick="scrollToSection('section1')"><p><i class="arrow down"></i></p></a>
+    </div>
+
+    <div class="boutique_container" id="section1">
+        <div class="boutique_content">
+            <h2>Les équipements de nos partenaires</h2>
+            <div class="boutique_items">
+                <div class="boutique_style">
+                    <img src="images/casque_vr.png" alt="">
+                    <h3>Product</h3>
+                    <p>Description</p>
+                    <p id="price">000,00 €</p>
+                    <a class="buy_button" href="#">Acheter</a>
+                </div>
+            </div>
+            <div class="boutique_items">
+                <div class="boutique_style">
+                    <img src="images/casque_vr.png" alt="">
+                    <h3>Product</h3>
+                    <p>Description</p>
+                    <p id="price">000,00 €</p>
+                    <a class="buy_button" href="#">Acheter</a>
+                </div>
+            </div>
+            <div class="boutique_items">
+                <div class="boutique_style">
+                    <img src="images/casque_vr.png" alt="">
+                    <h3>Product</h3>
+                    <p>Description</p>
+                    <p id="price">000,00 €</p>
+                    <a class="buy_button" href="#">Acheter</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="DownToUp" id="scrollButton">
+        <button onclick="scrollToTop()">
+            <p><i class="arrow"></i></p>
+        </button>
+    </div>
+
+    <footer>
+        <h2>Contactez-nous</h2>
+        <div class="boutons">
+            <a href="#" class="Button">Découvrir</a>
+            <a href="#" class="Button">Découvrir</a>
+            <a href="#" class="Button">Découvrir</a>
+        </div>
+        <div class="inputs">
+            <input type="text" placeholder=" Nom *">
+            <input type="text" placeholder=" Prenom *">
+            <input type="text" placeholder=" Email *">
+            <input type="text" placeholder=" Téléphone ">
+            <input type="text" placeholder=" Message *">
+        </div>
+        <div class="separator"></div>
+        <div class="bandeau-footer">
+
+            <div class="left-footer">
+                <a href="">Mentions légales</a>
+            </div>
+
+            <div class="right-footer">
+                <a href="">I</a>
+                <a href="">Y</a>
+                <a href="">X</a>
+                <a href="">T</a>
+                <a href="">D</a>
+                <a href="">Langue</a>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="js/scrollsection.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/scrolltop.js"></script>
+
+</body>
+</html>

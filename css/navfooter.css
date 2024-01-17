@@ -1,0 +1,284 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    top: 0;
+}
+
+body
+{
+    color: white;
+    background-color: rgb(36, 36, 36);
+    font-family: Arial, sans-serif;
+}
+
+
+/* NAV */
+
+nav {
+    background: rgba(0, 0, 0, 0.4);
+    color: rgb(255, 255, 255);
+    position: fixed;
+    z-index: 1; /* Assurez-vous que la barre de navigation est en premier plan */
+    transition: top 0.5s ease;
+}
+
+nav .mainMenu {
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    z-index: 10;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0,0.95);
+    transition: top 1s ease 0s;
+    display: none;
+}
+
+nav .mainMenu li
+{
+    list-style: none;
+}
+
+nav .mainMenu li a {
+    display: inline-block;
+    padding: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    transition: 0.2s ease;
+}
+
+nav .mainMenu li a:hover {
+    background: none;
+    color: rgb(255, 123, 0);
+}
+
+nav .mainMenu .closeMenu {
+    display: block;
+    font-size: 4rem;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.icons i {
+    display: inline-block;
+    font-size: 2rem;
+    padding: 12px;
+}
+
+.fa-facebook:hover {
+    color: rgb(0, 110, 255);
+}
+.fa-twitter:hover {
+    color: rgb(86, 154, 243);
+}
+.fa-instagram:hover {
+    color: rgb(255, 0, 191);
+}
+.fa-github:hover {
+    color: rgb(255, 123, 0);
+}
+
+nav .logo {
+    margin: 6px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+/* NAV OPEN MENU */
+
+.openMenu {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+}
+
+.openMenu button {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+}
+
+.openMenu p {
+    justify-content: center;
+    text-align: center;
+    font-size: 30px;
+}
+
+/* Down To Up */
+
+.DownToUp {
+    position: fixed;
+    top: calc(100% - 110px); /* Ajustez la valeur selon vos besoins */
+    right: 20px;
+}
+
+.DownToUp button {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+}
+
+.DownToUp .arrow {
+    display: inline-block;
+    border: solid #fff;
+    border-width: 0 3px 3px 0;
+    padding: 3px;
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+.DownToUp p {
+    justify-content: center;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* FOOTER */
+
+footer {
+    display: grid;
+    grid-template-columns: 40% 60%; /* Deux colonnes égales */
+    grid-template-rows: 20% 80%;
+    gap: 20px; /* Espacement entre les colonnes et les lignes */
+    background-color: rgb(25, 25, 25);
+    color: white; /* Couleur du texte */
+    padding-right: 20px;
+}
+
+
+footer h2 {
+    font-size: 4rem;
+    margin-top: 0; /* Supprimer la marge par défaut du h2 */
+    padding-left: 20px;
+}
+
+.boutons {
+    grid-column: 1; /* Boutons dans la première colonne */
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+}
+
+.boutons a {
+    display: inline-block;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 200px;
+    height: 75px;
+    text-align: center;
+    line-height: 75px; /* Ajustez la hauteur selon vos besoins */
+    vertical-align: middle; /* Alignement vertical au milieu */
+}
+
+button {
+    display: block;
+    margin-bottom: 10px; /* Espacement entre les boutons */
+}
+
+
+.inputs {
+    grid-column: 2; /* Champs de saisie dans la deuxième colonne */
+    justify-self: end;
+    padding-right: 20px;
+}
+
+.inputs input
+{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.inputs :last-child {
+    height: 200px;
+}
+
+input {
+    display: block;
+    width: 800px;
+    height: 50px;
+    border:3px solid #ffffff;
+    background-color:transparent;
+    color:#ffffff;
+    font-size: 2rem;
+    
+}
+
+.separator {
+    grid-column: span 2; /* Utiliser deux colonnes pour prendre toute la largeur */
+    grid-row: 3;
+    height: 2px;
+    background-color: white;
+}
+
+
+.bandeau-footer {
+    grid-column: span 2;
+    grid-row: 4;
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center; /* Alignement vertical des éléments */
+    justify-content: space-between; /* Espacement entre les éléments */
+    padding: 20px;
+}
+
+.bandeau-footer .right-footer a,
+.bandeau-footer .left-footer a
+{
+    color: white;
+    text-decoration: none;
+}
+
+.bandeau-footer .left-footer {
+    grid-column: 1;
+}
+.bandeau-footer .right-footer {
+    grid-column: 2;
+    justify-self: end;
+}
+
+
+/* MISC */
+
+.Button {
+	box-shadow:inset 0px 0px 7px 0px #ffffff;
+	background-color:transparent;
+	border:3px solid #ffffff;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	padding:9px 23px;
+	text-decoration:none;
+}
+.Button:hover {
+	background-color: rgba(255,255,255,0.1)
+}
+.Button:active {
+	position:relative;
+	top:1px;
+}
+
+@media (max-width: 600px)
+{
+    footer h2 {
+        grid-column: span 2;
+        font-size: 2rem;
+    }
+}

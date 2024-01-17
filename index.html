@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/accueil.css">
+    <link rel="stylesheet" href="css/navfooter.css">
+    <title>BEYOND</title>
+</head>
+<body>
+    <nav>
+        <div class="openMenu">
+            <button>
+                <p>&#x2630</p>
+            </button>
+        </div>
+
+        <ul class="mainMenu">
+            <li><a href="./index.html">Accueil</a></li>
+            <li><a href="#">Logiciels</a></li>
+            <li><a href="#">Jeu</a></li>
+            <li><a href="./boutique.html">Boutique</a></li>
+            <li><a href="#">A Propos</a></li>
+            <div class="closeMenu"><p>&#x2716</p></div>
+            <span class="icons">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-brands fa-x-twitter"></i>
+                <i class="fab fa-github"></i>
+            </span>
+        </ul>
+    </nav>
+
+
+    <div class="video-opening">
+        <video loop autoplay>
+            <source src="videos/GameEngine.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la balise vidéo.
+            Une vidéo permettant de visualiser l'interface utilisateur de notre moteur de jeu
+        </video>
+        <h1>BEYOND</h1>
+       <button onclick="scrollToSection('section1')"><p><i class="arrow down"></i></p></button>
+    </div>
+
+    <div class="text-img">
+        <h2 id="section1">LOGICIELS</h2>
+        <div class="img_container">
+            <img src="images/mac.jpg" alt="">
+            <div class="container_1">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, illo vel! Omnis deleniti quam illum, porro, expedita non facilis autem, necessitatibus facere illo iure libero. Officiis, facilis? Nisi dolorum nostrum debitis ipsam perferendis dicta praesentium tenetur at. Dolorem quasi voluptatum sequi praesentium nisi quibusdam, repudiandae quaerat ipsa soluta, natus consequatur! Placeat tenetur ullam itaque ex minima expedita omnis eligendi explicabo.</p>
+                <button class="ScrollArrow" onclick="scrollToSection('section2')"><a><i class="arrow down"></i></a></button>
+            </div>
+        </div>
+        <h2 id="section2">JEU</h2>
+        <div class="img_container">
+            <img src="images/mountains.jpg" alt="">
+            <div class="container_1">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa natus officiis voluptates quas atque. Quam eos sunt doloribus quibusdam fugiat.</p>
+                <button class="ScrollArrow" onclick="scrollToSection('section3')"><a><i class="arrow down"></i></a></button>
+            </div>
+        </div>
+
+    </div>
+
+    
+    <div id="section3" class="decouvrir">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci ab vero sit id modi eaque quos aspernatur, doloribus omnis eos.</p>
+
+        <div class="button_block">
+            <a href="#" class="Button">Découvrir</a>
+            <a href="#" class="Button">Découvrir</a>
+            <a href="#" class="Button">Découvrir</a>
+        </div>
+
+        <video loop autoplay controls>
+            <source src="videos/monitor.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la balise vidéo.
+            Une vidéo permettant de visualiser l'interface utilisateur de notre moteur de jeu
+        </video>
+
+    </div>
+
+
+    <div class="DownToUp" id="scrollButton">
+        <button onclick="scrollToTop()">
+            <p><i class="arrow"></i></p>
+        </button>
+    </div>
+
+    <footer>
+        <h2>Contactez-nous</h2>
+        <div class="boutons">
+            <a href="#" class="Button">Découvrir</a>
+            <a href="#" class="Button">Découvrir</a>
+            <a href="#" class="Button">Découvrir</a>
+        </div>
+        <div class="inputs">
+            <input type="text" placeholder=" Nom *">
+            <input type="text" placeholder=" Prenom *">
+            <input type="text" placeholder=" Email *">
+            <input type="text" placeholder=" Téléphone ">
+            <input type="text" placeholder=" Message *">
+        </div>
+        <div class="separator"></div>
+        <div class="bandeau-footer">
+
+            <div class="left-footer">
+                <a href="">Mentions légales</a>
+            </div>
+
+            <div class="right-footer">
+                <a href="">I</a>
+                <a href="">Y</a>
+                <a href="">X</a>
+                <a href="">T</a>
+                <a href="">D</a>
+                <a href="">Langue</a>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="js/scrollsection.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/scrolltop.js"></script>
+    
+
+</body>
+</html>
