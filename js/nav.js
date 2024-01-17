@@ -20,6 +20,7 @@ function show() {
 
     document.body.style.overflow = "hidden";
     openMenu.style.pointerEvents = 'none'; // Désactiver les événements du bouton pendant l'animation
+    openMenu.style.display = 'none';
 }
 
 function close() {
@@ -29,6 +30,8 @@ function close() {
     setTimeout(() => {
         mainMenu.style.display = 'none';
         document.body.style.overflow = "auto";
-        openMenu.style.pointerEvents = 'auto'; // Réactiver les événements du bouton après l'animation
+        openMenu.style.pointerEvents = 'auto';
+        openMenu.style.display = 'block'; // Réactiver les événements du bouton après l'animation
     }, 1000); // Attendre la fin de l'animation (2 secondes) avant de masquer la barre de navigation
+
 }

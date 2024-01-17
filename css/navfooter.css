@@ -102,6 +102,7 @@ nav .mainMenu.slideInOut {
     animation: slideInOut 1s ease;
 }
 
+
 @keyframes slideInOut {
     from {
         transform: translateY(-100%);
