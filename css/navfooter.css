@@ -122,18 +122,13 @@ nav .mainMenu.slideInOut {
 }
 
 .openMenu button {
+    font-size: 30px;
     background-color: rgba(0, 0, 0, 0.9);
     color: #fff;
     border: none;
     cursor: pointer;
     height: 50px;
     width: 50px;
-}
-
-.openMenu p {
-    justify-content: center;
-    text-align: center;
-    font-size: 30px;
 }
 
 /* Down To Up */
