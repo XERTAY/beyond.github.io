@@ -1,0 +1,110 @@
+.img_affiche {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Deux colonnes égales */
+    gap: 20px; /* Espace entre les colonnes */
+}
+
+.play {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Centre horizontalement et verticalement */
+    height: 100%; /* Remplit la hauteur du conteneur parent */
+}
+
+.play h1 {
+    font-size: 5rem;
+}
+
+.play a {
+    margin-top: 10px; /* Marge entre le h1 et le lien */
+}
+
+img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover; /* Ajuste la taille de l'image tout en conservant les proportions */
+    border-radius: 10px; /* Ajoutez une bordure arrondie si nécessaire */
+}
+
+
+/* DOWNLOAD BEYOND LIFE */
+
+.img_title {
+    position: relative;
+    height: 700px;
+    overflow: hidden; /* Masque le dépassement d'image en dehors du conteneur */
+}
+
+.img_title img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajuste la taille de l'image tout en conservant les proportions */
+}
+
+.img_title h1 {
+    font-size: 8rem;
+    position: absolute;
+    top: 150px; /* Marge de 150px en haut */
+    left: 50px; /* Marge de 50px à gauche */
+    margin: 0; /* Supprime la marge par défaut du h1 */
+    color: white; /* Couleur du texte */
+}
+
+.download_text {
+    margin: 50px;
+    text-align: center; /* Centre le texte horizontalement */
+}
+
+.download_text p {
+    margin-bottom: 20px; /* Marge en bas du paragraphe */
+}
+
+.download_text a {
+    display: inline-block; /* Permet aux liens d'être sur la même ligne */
+    margin-right: 10px; /* Marge entre les deux boutons */
+    padding: 10px 20px; /* Rembourrage pour un meilleur aspect visuel */
+    text-decoration: none;
+    color: #fff; /* Couleur du texte */
+    background-color: #007bff; /* Couleur de fond du bouton */
+}
+
+.download_text a:hover {
+    background-color: #0056b3; /* Couleur de fond du bouton au survol */
+}
+
+.frames
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.frame {
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 100%;
+    border-radius: 25px;
+    padding: 20px;
+    position: relative;
+    margin: 20px 100px 20px 100px;
+}
+
+.frame p {
+    max-width: 100%;
+    height: 100px; /* Définissez la hauteur souhaitée pour le paragraphe */
+    overflow: hidden;
+    text-align: justify;
+    margin: 0 10px 0 10px;
+    font-style: italic;
+    font-size: 1.5rem;
+}
+
+.frame img {
+    width: 500px;
+    height: 300px;
+    object-fit: cover; /* Ajuste la taille de l'image tout en conservant les proportions */
+}

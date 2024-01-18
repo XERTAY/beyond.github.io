@@ -125,35 +125,6 @@ body > :not(.container):not(footer):not(.DownToUp) {
     margin-top: auto;
 }
 
-a.buy_button{
-    background: linear-gradient(to right,#252685 ,#09015b);
-    background-color: #252685;
-    color: #fff;
-    font-family: Trebuchet MS;
-    font-size: 18px;
-    font-weight: 800;
-    font-style: normal;
-    text-decoration: none;
-    padding: 20px 40px;
-    border: 0px solid #000;
-    border-radius: 10px;
-    display: inline-block;
-    margin-top: auto;
-}
-
-a.buy_button:hover{
-background: linear-gradient(to right,#585896 ,#515176);
-background-color: #585896;
-}
-
-a.buy_button:active{
-transform: scale(0.95);
-}
-
-a{
-    cursor: pointer;
-}
-
 .boutique_separator
 {
     display: flex;
