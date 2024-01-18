@@ -20,7 +20,7 @@ nav {
     color: rgb(255, 255, 255);
     position: fixed;
     z-index: 1;
-    top: 0; /* Ajoutez cette ligne pour spécifier la position initiale */
+    top: 0;
     transition: top 0.5s ease;
 }
 
@@ -37,11 +37,11 @@ nav .mainMenu {
     background: rgba(0, 0, 0,0.95);
     transition: top 1s ease 0s;
     display: none;
-    padding: 0; /* Ajout de cette ligne */
+    padding: 0;
 }
 
 nav.showNav {
-    top: -100%; /* Déplacez la barre de navigation vers le haut pour la masquer */
+    top: -100%;
 }
 
 
@@ -137,7 +137,7 @@ nav .mainMenu.slideInOut {
 .DownToUp {
     display: none;
     position: fixed;
-    top: calc(100% - 110px); /* Ajustez la valeur selon vos besoins */
+    top: calc(100% - 110px);
     right: 20px;
 }
 
@@ -233,7 +233,7 @@ input {
 }
 
 .separator {
-    grid-column: span 2; /* Utiliser deux colonnes pour prendre toute la largeur */
+    grid-column: span 2;
     grid-row: 3;
     height: 2px;
     background-color: white;
@@ -247,8 +247,8 @@ input {
     display: grid;
     grid-template-columns: auto 1fr;
     grid-template-rows: 1fr 1fr;
-    align-items: center; /* Alignement vertical des éléments */
-    justify-content: space-between; /* Espacement entre les éléments */
+    align-items: center; 
+    justify-content: space-between;
     padding: 20px;
 }
 
@@ -293,9 +293,8 @@ input {
 @media (max-width: 600px)
 {
     footer {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(3,auto);
-        gap :0;
+        display: flex;
+        flex-direction: column;
     }
 
     footer h2 {
@@ -304,11 +303,9 @@ input {
     }
 
     .boutons {
-        grid-column: 1;
         display: flex;
         flex-direction: row;
         padding: 10px;
-        grid-row: 2;
         justify-content: center;
       }
     .boutons a {
@@ -319,8 +316,11 @@ input {
         margin: 2px;
     }
     .inputs {
-        grid-column: 1;
-        grid-row: 3;
         padding: 0;
+        overflow-x: hidden;
+    }
+    input {
+        width: calc(100% - 20px);
+        margin: 5px 10px; 
     }
 }

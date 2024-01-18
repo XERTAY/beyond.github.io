@@ -7,16 +7,18 @@
     background-position: center;
     background-repeat: no-repeat;
     padding: 20px;
+    height: 90vh;
 }
 
 .boutique_content {
     display: grid;
-    background-color: rgb(50, 50, 50);
+    background-color: rgba(50, 50, 50, 0.7);
     border-radius: 25px;
     padding: 20px;
     width: 75%;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto 1fr;
+    margin: 20px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: auto min-content;
     gap: 20px;
 }
 
@@ -29,18 +31,6 @@
 }
 
 .boutique_items {
-    display: grid;
-    grid-template-columns: 1fr;
-    background-color: rgb(36, 36, 36);
-    border-radius: 25px;
-    max-width: 100%;
-    max-height: 100%; 
-    justify-content: center;
-    align-items: center; 
-    padding: 20px;
-}
-
-.boutique_style {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -48,46 +38,54 @@
     background-color: rgba(255, 255, 255, 0.1);
     width: 100%;
     border-radius: 25px;
-    padding: 20px;
+    padding: 2em;
     position: relative;
 }
 
-.boutique_style h3
-{
-    font-size: 3rem;
+.boutique_items h3 {
+    font-size: 2em;
 }
 
-.boutique_style p {
+.boutique_items .description
+{
     max-width: 100%;
-    height: 150px; /* Définissez la hauteur souhaitée pour le paragraphe */
     overflow: hidden;
     text-align: justify;
-    margin: 10px;
+    margin-bottom: 1em;
     font-style: italic;
-    font-size: 1.5rem;
+    font-size: 1em;
+    height: 100px;
 }
 
-.price 
+
+.boutique_items .price
 {
-    font-size: 3rem;
+    max-width: 100%;
+    overflow: hidden;
+    text-align: justify;
+    margin-bottom: 1em;
+    font-style: italic;
+    font-size: 1em;
+    height: 20px;
+}
+
+.price {
+    font-size: 2em;
     font-weight: 600;
     height: auto;
     font-style: normal;
 }
 
-.boutique_style img {
+.boutique_items img {
     max-width: 100%;
     max-height: 100%;
     object-fit: cover;
-    margin-bottom: 50px;
+    margin-bottom: 1em;
 }
 
-.boutique_style a {
+.boutique_items a {
     margin-top: auto;
 }
-
-
-
 
 a.buy_button{
     background: linear-gradient(to right,#252685 ,#09015b);
@@ -102,7 +100,7 @@ a.buy_button{
     border: 0px solid #000;
     border-radius: 10px;
     display: inline-block;
-    margin-top: 10%;
+    margin-top: auto;
 }
 
 a.buy_button:hover{
@@ -123,7 +121,7 @@ a{
     display: flex;
     height: 10vh;
     justify-content: center;
-    align-items: center; /* Centrage vertical */
+    align-items: center;
 }
 
 .ScrollArrow {
@@ -151,45 +149,64 @@ a{
     }
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
     .boutique_container {
         height: auto;
+        padding: 10px;
     }
-    .boutique_content
-    {
+
+    .boutique_content {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(3,auto);
+        grid-template-rows: auto;
+        gap: 10px;
+        width: 100%;
+        margin: 20px;
     }
 
-    .boutique_content h2
-    {
+    .boutique_content h2 {
+        grid-column: 1;
+    }
+
+    .boutique_items {
+        grid-column: 1;
+        margin: 0 auto;
+    }
+
+    .boutique_items {
+        padding: 10px;
+    }
+
+    .boutique_items h3 {
+        font-size: 1.5rem;
+    }
+
+    .boutique_items p {
         font-size: 1rem;
-        grid-row: 1;
-        grid-column: 1;
-    }
-
-    .boutique_items
-    {
-        grid-column: 1;
+        max-height: none;
     }
 }
 
-@media (max-width:1500px) {
+
+@media (min-width: 851px) and (max-width: 1500px) {
     .boutique_content {
-        width: 95%;
-        height: auto;
+        width: 90%;
     }
-    .boutique_style h3
-    {
-        font-size: 1.5rem;
+
+    .boutique_items h3 {
+        font-size: 2rem;
     }
-    .boutique_style img {
-        margin-bottom: 0;
+
+    .boutique_items p {
+        font-size: 1.2rem;
     }
-    .boutique_style p {
-        font-size: 1rem;
+
+    .price {
+        font-size: 2rem;
     }
-    .price  {
-        font-size: 1.5rem;
+}
+
+@media (min-width: 1500px) {
+    .boutique_content {
+        width: 50%;
     }
 }
