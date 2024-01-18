@@ -122,7 +122,6 @@ a{
 {
     display: flex;
     height: 10vh;
-    background-color: rgb(36, 36, 36);
     justify-content: center;
     align-items: center; /* Centrage vertical */
 }

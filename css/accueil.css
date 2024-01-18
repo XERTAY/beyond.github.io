@@ -1,4 +1,15 @@
+body > :not(.video-opening):not(footer):not(.DownToUp) {
+    margin: 0 15%;
+}
+
+
 /* VIDEO OPENING */
+
+.video-opening {
+    position: relative;
+    width: 100%;
+    z-index: 0; /* Assurez-vous que la vidéo est en arrière-plan */
+}
 
 .video-opening video {
     opacity: 0.7;
@@ -7,12 +18,6 @@
     object-fit: cover;
     object-position: center;
     z-index: -1; /* Assurez-vous que la vidéo est en arrière-plan */
-}
-
-.video-opening {
-    position: relative;
-    width: 100%;
-    z-index: 0; /* Assurez-vous que la vidéo est en arrière-plan */
 }
 
 .video-opening h1 {
@@ -63,12 +68,10 @@
 
 .text-img {
     display: grid;
-    width: 100%;
     justify-content: center; /* Centre les éléments horizontalement */
     align-items: center; /* Centre les éléments verticalement */
     grid-template-columns: 1fr; /* Une colonne */
     grid-template-rows: 1fr; /* Une ligne */
-    margin-bottom: 50px;
 }
 
 .text-img h2
@@ -136,7 +139,6 @@
 /* DECOUVRIR */
 
 .decouvrir {
-    background-color: rgb(36, 36, 36);
     display: flex;
     flex-direction: column; /* Organise les éléments en colonne */
     justify-content: center; /* Centre les éléments verticalement */
@@ -202,6 +204,10 @@
         height: auto;
     }
 
+    body > :not(.video-opening):not(footer):not(.DownToUp) {
+        margin: 0;
+    }
+
 }
 
 @media (max-width:850px) {
@@ -209,6 +215,11 @@
     .video-opening h1
     {
         font-size: 5rem;
+    }
+
+    .video-opening button
+    {
+        left: 48%;
     }
 
     .img_container p {
@@ -263,6 +274,10 @@
     .img_container:nth-child(even) .container_1 p {
         order: 2;
         font-size: 1.2rem;
+    }
+
+    body > :not(.video-opening):not(footer):not(.DownToUp) {
+        margin: 0;
     }
     
 }

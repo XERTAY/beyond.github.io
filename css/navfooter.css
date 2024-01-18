@@ -7,7 +7,8 @@
 body
 {
     color: white;
-    background-color: rgb(36, 36, 36);
+    background: rgb(10,10,10);
+    background: linear-gradient(0deg, rgba(10,10,10,1) 0%, rgba(21,21,21,1) 27%, rgba(30,30,30,1) 52%, rgba(40,40,40,1) 74%, rgba(50,50,50,1) 100%);
     font-family: Arial, sans-serif;
 }
 
@@ -169,12 +170,9 @@ nav .mainMenu.slideInOut {
 
 footer {
     display: grid;
-    grid-template-columns: 40% 60%; /* Deux colonnes égales */
-    grid-template-rows: 20% 80%;
-    gap: 20px; /* Espacement entre les colonnes et les lignes */
-    background-color: rgb(25, 25, 25);
-    color: white; /* Couleur du texte */
-    padding-right: 20px;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2,auto);
+    color: white; 
 }
 
 
@@ -186,7 +184,7 @@ footer h2 {
 }
 
 .boutons {
-    grid-column: 1; /* Boutons dans la première colonne */
+    grid-column: 1;
     display: flex;
     flex-direction: column;
     padding-left: 20px;
@@ -199,21 +197,24 @@ footer h2 {
     width: 200px;
     height: 75px;
     text-align: center;
-    line-height: 75px; /* Ajustez la hauteur selon vos besoins */
-    vertical-align: middle; /* Alignement vertical au milieu */
+    line-height: 75px;
+    vertical-align: middle;
 }
 
 button {
     display: block;
-    margin-bottom: 10px; /* Espacement entre les boutons */
+    margin-bottom: 10px;
 }
 
 
 .inputs {
-    grid-column: 2; /* Champs de saisie dans la deuxième colonne */
+    display: flex;
+    flex-direction: column;
+    grid-column: 2;
+    width: 100%;
     justify-self: end;
     padding-right: 20px;
-}
+  }
 
 .inputs :last-child {
     height: 200px;
@@ -221,7 +222,6 @@ button {
 
 input {
     display: block;
-    width: 800px;
     height: 50px;
     border: 3px solid #ffffff;
     background-color: transparent;
@@ -229,6 +229,7 @@ input {
     font-size: 2rem;
     margin-top: 30px;
     margin-bottom: 30px;
+    right: 0;
 }
 
 .separator {
@@ -308,6 +309,7 @@ input {
         flex-direction: row;
         padding: 10px;
         grid-row: 2;
+        justify-content: center;
       }
     .boutons a {
         display: inline-block;
@@ -320,11 +322,5 @@ input {
         grid-column: 1;
         grid-row: 3;
         padding: 0;
-    }
-}
-
-@media (max-width:1500px) {
-    input {
-        width: 100%;
     }
 }
