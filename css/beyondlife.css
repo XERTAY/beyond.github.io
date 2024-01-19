@@ -118,13 +118,43 @@ img {
     overflow: hidden;
     text-align: justify;
     margin: 0 10px 0 10px;
-    font-style: italic;
     font-size: 1.5rem;
-    z-index: 3;
 }
 
 .frame img {
     width: 500px;
     height: 300px;
     object-fit: cover; /* Ajuste la taille de l'image tout en conservant les proportions */
+}
+
+@media (max-width: 768px) {
+
+    .img_title h1 {
+        font-size: 4rem;
+    }
+
+    .img_title {
+        height: auto;
+      }
+
+
+      .img_title .image-container img {
+        height: 90vh;
+      }
+}
+
+@media (min-width: 769px) and (max-width: 1500px) {
+
+    .img_title h1 {
+        font-size: 4rem;
+    }
+
+    .img_title {
+        height: auto;
+      }
+
+
+      .img_title .image-container img {
+        height: 70vh;
+      }
 }
