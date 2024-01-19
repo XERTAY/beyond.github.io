@@ -35,3 +35,25 @@ function close() {
     }, 1000); // Attendre la fin de l'animation (2 secondes) avant de masquer la barre de navigation
 
 }
+
+
+function validateForm() {
+    var nom = document.getElementById('nom').value;
+    var prenom = document.getElementById('prenom').value;
+    var email = document.getElementById('email').value;
+    var telephone = document.getElementById('telephone').value;
+    var message = document.getElementById('message').value;
+
+    if (!nom || !prenom || !email || !telephone || !message) {
+        alert("Veuillez remplir tous les champs.");
+        return false;
+    }
+
+    var telephonePattern = /^(\+33|0)[6-7](\d\d){4}$/;
+    if (!telephonePattern.test(telephone)) {
+        alert("Veuillez saisir un numéro de téléphone valide.");
+        return false;
+    }
+
+    return true;
+}

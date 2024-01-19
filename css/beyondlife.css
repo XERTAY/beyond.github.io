@@ -24,9 +24,7 @@ img {
     width: 100%;
     height: 600px;
     object-fit: cover; /* Ajuste la taille de l'image tout en conservant les proportions */
-    border-radius: 10px; /* Ajoutez une bordure arrondie si nécessaire */
 }
-
 
 /* DOWNLOAD BEYOND LIFE */
 
@@ -36,11 +34,24 @@ img {
     overflow: hidden; /* Masque le dépassement d'image en dehors du conteneur */
 }
 
-.img_title img {
+.img_title::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ajuste la taille de l'image tout en conservant les proportions */
+    background: rgba(0, 0, 0, 0.4); /* Ajoutez votre couleur et opacité ici */
+    z-index: 1; /* Assurez-vous que la superposition est au-dessus de l'image */
 }
+
+.img_title .image-container img {
+    width: 100%;
+    height: auto;
+    height: 100%;
+    display: block;
+    z-index: 2; /* Assurez-vous que l'image est au-dessus de la superposition */
+}   
 
 .img_title h1 {
     font-size: 8rem;
@@ -49,6 +60,7 @@ img {
     left: 50px; /* Marge de 50px à gauche */
     margin: 0; /* Supprime la marge par défaut du h1 */
     color: white; /* Couleur du texte */
+    z-index: 3;
 }
 
 .download_text {
@@ -58,6 +70,8 @@ img {
 
 .download_text p {
     margin-bottom: 20px; /* Marge en bas du paragraphe */
+    font-size: 1.5rem;
+    text-align: justify;
 }
 
 .download_text a {
@@ -73,10 +87,16 @@ img {
     background-color: #0056b3; /* Couleur de fond du bouton au survol */
 }
 
-.frames
+.frames:first-child
 {
     display: flex;
     flex-direction: row;
+}
+
+.frames:last-child
+{
+    display: flex;
+    flex-direction: column;
 }
 
 .frame {
@@ -86,7 +106,6 @@ img {
     align-items: center;
     justify-content: space-between;
     background-color: rgba(255, 255, 255, 0.1);
-    width: 100%;
     border-radius: 25px;
     padding: 20px;
     position: relative;
@@ -95,12 +114,13 @@ img {
 
 .frame p {
     max-width: 100%;
-    height: 100px; /* Définissez la hauteur souhaitée pour le paragraphe */
+    height: 150px; /* Définissez la hauteur souhaitée pour le paragraphe */
     overflow: hidden;
     text-align: justify;
     margin: 0 10px 0 10px;
     font-style: italic;
     font-size: 1.5rem;
+    z-index: 3;
 }
 
 .frame img {

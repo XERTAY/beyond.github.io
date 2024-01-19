@@ -8,6 +8,11 @@ body > :not(.container):not(footer):not(.DownToUp) {
 {
     display: grid;
     grid-template-columns: 40% 60%;
+    background-image: url('/images/banner_gaming.png');
+    background-size: cover; /* This will make the image cover the entire div */
+    background-position: center; /* This will center the image within the div */
+    background-repeat: no-repeat;
+    
 }
 
 .accroche .picture
@@ -19,17 +24,14 @@ body > :not(.container):not(footer):not(.DownToUp) {
 .logos {
     display: flex;
     align-items: center; /* Centre les éléments verticalement */
+    margin-bottom: 20%;
 }
-
-#logo {
-    margin-right: 10px; /* Marge à droite de l'image pour créer de l'espace entre l'image et le texte */
-}
-
 
 #logo
 {
-    width: 50px;
-    height: 50px;
+    margin-right: 10px;
+    width: 100px;
+    height: 100px;
 }
 
 .accroche_text {
@@ -37,10 +39,26 @@ body > :not(.container):not(footer):not(.DownToUp) {
     flex-direction: column;
     justify-content: center; /* Centrer les enfants verticalement */
     margin-top: 50% ;
+    margin-bottom: 20%;
+}
+
+.accroche_text h2 {
+    font-size: 2rem;
+}
+
+.accroche_text h3 {
+    font-size: 2.5rem;
 }
 
 .accroche_text p {
     padding: 20px 0 20px 0;
+}
+
+.accroche_text h2,
+.accroche_text p,
+.accroche_text a
+{
+    margin-left: 20px;
 }
 
 /* CONTAINER */
@@ -97,9 +115,8 @@ body > :not(.container):not(footer):not(.DownToUp) {
     overflow: hidden;
     text-align: justify;
     margin-bottom: 1em;
-    font-style: italic;
     font-size: 1em;
-    height: 100px;
+    height: 200px;
 }
 
 
@@ -157,6 +174,83 @@ body > :not(.container):not(footer):not(.DownToUp) {
         transform: translateY(-20px);
     }
 }
+
+
+/* Switch */
+
+.switch-container {
+    display:  flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.switch-container p {
+    padding-left: 20px;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px; /* Rounded corners for the slider */
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%; /* Rounded corners for the slider knob */
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* Styling for checked state */
+.switch input:checked + .slider {
+    background-color: #2196F3;
+}
+
+.switch input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+.switch input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+
 
 /* FAQ */
 

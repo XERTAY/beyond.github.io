@@ -50,16 +50,30 @@
         <div class="img_container">
             <img src="images/mac.jpg" alt="">
             <div class="container_1">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, illo vel! Omnis deleniti quam illum, porro, expedita non facilis autem, necessitatibus facere illo iure libero. Officiis, facilis? Nisi dolorum nostrum debitis ipsam perferendis dicta praesentium tenetur at. Dolorem quasi voluptatum sequi praesentium nisi quibusdam, repudiandae quaerat ipsa soluta, natus consequatur! Placeat tenetur ullam itaque ex minima expedita omnis eligendi explicabo.</p>
-                <button class="ScrollArrow" onclick="scrollToSection('section2')"><i class="arrow down"></i></button>
+                <div class="text">
+                    <div class="title_head">
+                        <h2>BEYOND CREATIVE</h2>
+                    </div>
+                    <div class="paragraphe">
+                        <p>Notre suite de logiciels, BEYOND CREATIVE, redéfinit les limites de la créativité en fusionnant la réalité augmentée et virtuelle. Que vous soyez un professionnel de la conception, un artiste émergent ou une entreprise à la recherche d'innovation, BEYOND CREATIVE offre une plateforme polyvalente conçue pour libérer votre imagination</p>
+                    </div>
+                    <button class="ScrollArrow" onclick="scrollToSection('section2')"><i class="arrow down"></i></button>
+                </div>
             </div>
         </div>
         <h2 id="section2">JEU</h2>
         <div class="img_container">
-            <img src="images/mountains.jpg" alt="">
+            <img src="images/mac.jpg" alt="">
             <div class="container_1">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa natus officiis voluptates quas atque. Quam eos sunt doloribus quibusdam fugiat.</p>
-                <button class="ScrollArrow" onclick="scrollToSection('section3')"><i class="arrow down"></i></button>
+                <div class="text">
+                    <div class="title_head">
+                        <h2>BEYOND LIFE</h2>
+                    </div>
+                    <div class="paragraphe">
+                        <p>Bienvenue dans BEYOND LIFE, l'ultime aventure virtuelle qui transcende les frontières de l'imagination. Explorez des mondes extraordinaires, relevez des défis épiques et vivez des expériences inoubliables dans ce jeu révolutionnaire qui redéfinit la réalité virtuelle.</p>
+                    </div>
+                    <button class="ScrollArrow" onclick="scrollToSection('section3')"><i class="arrow down"></i></button>
+                </div>
             </div>
         </div>
 
@@ -67,12 +81,12 @@
 
     
     <div id="section3" class="decouvrir">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci ab vero sit id modi eaque quos aspernatur, doloribus omnis eos.</p>
+        <p>Créez des expériences immersives sans limites grâce à des outils intuitifs !</p>
 
         <div class="button_block">
-            <a href="#" class="Button">Découvrir</a>
-            <a href="#" class="Button">Découvrir</a>
-            <a href="#" class="Button">Découvrir</a>
+            <a href="./logiciels.html#section2" class="buy_button">BEYOND ENGINE</a>
+            <a href="./logiciels.html#section2" class="buy_button">BEYOND VIRTUAL</a>
+            <a href="./logiciels.html#section2" class="buy_button">BEYOND VERSE</a>
         </div>
 
         <video loop autoplay controls>
@@ -97,14 +111,17 @@
             <a href="#" class="Button">Découvrir</a>
             <a href="#" class="Button">Découvrir</a>
         </div>
-        <div class="inputs">
-            <input type="text" placeholder=" Nom : AKAGUNDUZ *" required>
-            <input type="text" placeholder=" Prenom : David *" required>
-            <input type="text" placeholder=" Email : david.akagunduz@gmail.com *" required>
-            <input type="text" placeholder=" Téléphone : 0655664488 *" pattern="^(\+33|0)[6-7](\d\d){4}$" required>
-            <input type="text" placeholder=" Message *" required>
-            <input type="submit" value="Envoyer">
-        </div>
+        <form onsubmit="return validateForm()">
+            <div class="inputs">
+                <input type="text" id="nom" placeholder=" Nom : AKAGUNDUZ *" required>
+                <input type="text" id="prenom" placeholder=" Prenom : David *" required>
+                <input type="email" id="email" placeholder=" Email : david.akagunduz@gmail.com *" required>
+                <input type="text" id="telephone" placeholder=" Téléphone : 0655664488 *" pattern="^(\+33|0)[6-7](\d\d){4}$" required>
+                <input type="text" id="message" placeholder=" Message *" required>
+                <input type="submit" value="Envoyer">
+            </div>
+        </form>
+        
         <div class="separator"></div>
         <div class="bandeau-footer">
 

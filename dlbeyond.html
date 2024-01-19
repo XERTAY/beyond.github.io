@@ -35,11 +35,18 @@
 
     <div class="img_title">
         <h1>BEYOND LIFE</h1>
-        <img src="images/banner_forest.jpg" alt="">
+        <div class="image-container">
+            <img src="images/paysage_bg.jpg" alt="">
+        </div>
     </div>
 
     <div class="download_text">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum deserunt inventore commodi sint voluptatum illo ex quos temporibus, dignissimos ea quibusdam ad itaque dolorum fugiat distinctio maxime expedita quasi. Eaque voluptatum quas velit delectus, architecto voluptatem totam excepturi laborum minima cum debitis quia expedita fuga neque necessitatibus, adipisci similique? Blanditiis dolorem perspiciatis optio accusamus eius molestiae, necessitatibus fugiat aperiam maiores.</p>
+        <p>Plongez dans l'univers envoûtant de BEYOND LIFE et explorez des mondes infinis, défiez des adversaires redoutables, et créez votre propre destinée virtuelle. 
+            Téléchargez dès maintenant BEYOND LIFE pour vivre une expérience de jeu MMO immersive, inspirée par les meilleurs éléments de Darwin's Game et Sword Art Online. 
+            Rejoignez une communauté dynamique et découvrez l'excitation sans limites de ce monde virtuel révolutionnaire. 
+            Ne manquez pas l'opportunité de forger des alliances, de créer vos propres mondes, et de vivre des aventures épiques. 
+            Cliquez ici pour télécharger BEYOND LIFE et plongez dans une aventure qui va au-delà de l'ordinaire. Votre aventure virtuelle commence maintenant.
+        </p>
         <a class="buy_button" href="#">Télécharger et créer un compte</a>
         <a class="buy_button" href="#">Télécharger maintenant</a>
     </div>
@@ -57,14 +64,17 @@
             <a href="#" class="Button">Découvrir</a>
             <a href="#" class="Button">Découvrir</a>
         </div>
-        <div class="inputs">
-            <input type="text" placeholder=" Nom : AKAGUNDUZ *" required>
-            <input type="text" placeholder=" Prenom : David *" required>
-            <input type="text" placeholder=" Email : david.akagunduz@gmail.com *" required>
-            <input type="text" placeholder=" Téléphone : 0655664488 *" pattern="^(\+33|0)[6-7](\d\d){4}$" required>
-            <input type="text" placeholder=" Message *" required>
-            <input type="submit" value="Envoyer">
-        </div>
+        <form onsubmit="return validateForm()">
+            <div class="inputs">
+                <input type="text" id="nom" placeholder=" Nom : AKAGUNDUZ *" required>
+                <input type="text" id="prenom" placeholder=" Prenom : David *" required>
+                <input type="email" id="email" placeholder=" Email : david.akagunduz@gmail.com *" required>
+                <input type="text" id="telephone" placeholder=" Téléphone : 0655664488 *" pattern="^(\+33|0)[6-7](\d\d){4}$" required>
+                <input type="text" id="message" placeholder=" Message *" required>
+                <input type="submit" value="Envoyer">
+            </div>
+        </form>
+        
         <div class="separator"></div>
         <div class="bandeau-footer">
 

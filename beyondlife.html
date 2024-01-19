@@ -40,32 +40,32 @@
             <h1>BEYOND LIFE</h1>
             <a class="buy_button" href="./dlbeyond.html">JOUER MAINTENANT</a>
         </div>
-        <img src="images/banner_forest.jpg" alt="">
+        <img src="images/paysage_bg.jpg" alt="">
     </div>
 
     <div class="banner_frame_container">
         <div class="banner-frames">
+
             <div class="frames">
 
                 <div class="frame">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus, nemo!</p>
-                    <img src="images/e-coins.png" alt="">
+                    <p>Laissez-vous immerger dans des paysages à couper le souffle et des détails visuels à la pointe de la technologie</p>
+                    <img src="images/forest_mountains.jpg" alt="">
                 </div>
 
                 <div class="frame">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus, nemo!</p>
+                    <p>Rejoignez une communauté dynamique de joueurs partageant les mêmes idées</p>
                     <img src="images/e-coins.png" alt="">
                 </div>
 
             </div>
             <div class="frames">
                 <div class="frame">
-                    <p class="more-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum at tenetur error minus sunt? Voluptatibus corrupti, obcaecati esse sunt asperiores quasi blanditiis? At tempora ipsam natus animi pariatur aspernatur, dolor quasi sed aut. Est debitis, quidem saepe commodi accusantium vero quis rerum ducimus harum repudiandae, at et odit explicabo labore!</p>
+                    <p class="more-text">Bienvenue dans BEYOND LIFE, un MMO révolutionnaire qui marie l'intensité tactique de Darwin's Game à l'immersion extraordinaire de Sword Art Online. Dans ce monde virtuel époustouflant, les joueurs se retrouvent immergés dans une aventure où les limites entre la réalité et le virtuel s'estompent. Inspiré par l'intrigue captivante de Darwin's Game, chaque joueur est confronté à des défis mortels et doit faire preuve de stratégie pour survivre et prospérer. Le gameplay dynamique et réactif de SAO influence l'action, offrant une expérience de jeu fluide et palpitante.
+                    </p>
                 </div>
-            </div>
-            <div class="frames">
                 <div class="frame">
-                    <p class="more-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident exercitationem soluta fugiat recusandae iusto sed numquam, officia unde cumque at maxime facilis qui, atque incidunt similique aut commodi iste tempore rerum obcaecati eius, natus inventore sint mollitia? Inventore distinctio nihil nemo fugiat aspernatur aut molestiae maiores adipisci perspiciatis! Ipsum, assumenda!</p>
+                    <p class="more-text">BEYOND LIFE va au-delà des attentes en permettant à notre communauté passionnée de créer ses propres mondes virtuels. En puisant dans l'esprit de l'innovation de Darwin's Game et dans la diversité des mondes de SAO, les joueurs deviennent les architectes de leurs propres réalités virtuelles. Imaginez des paysages fantastiques, des défis uniques et des aventures inédites. La création collaborative de mondes devient le cœur de l'expérience, où chaque joueur contribue à l'évolution constante de l'univers de BEYOND LIFE. Préparez-vous à explorer des mondes créés par la communauté, où l'imagination n'a pas de limites et où chaque joueur peut laisser sa marque dans ce MMO innovant et collaboratif.</p>
                 </div>
             </div>
         </div>
@@ -86,14 +86,17 @@
             <a href="#" class="Button">Découvrir</a>
             <a href="#" class="Button">Découvrir</a>
         </div>
-        <div class="inputs">
-            <input type="text" placeholder=" Nom : AKAGUNDUZ *" required>
-            <input type="text" placeholder=" Prenom : David *" required>
-            <input type="text" placeholder=" Email : david.akagunduz@gmail.com *" required>
-            <input type="text" placeholder=" Téléphone : 0655664488 *" pattern="^(\+33|0)[6-7](\d\d){4}$" required>
-            <input type="text" placeholder=" Message *" required>
-            <input type="submit" value="Envoyer">
-        </div>
+        <form onsubmit="return validateForm()">
+            <div class="inputs">
+                <input type="text" id="nom" placeholder=" Nom : AKAGUNDUZ *" required>
+                <input type="text" id="prenom" placeholder=" Prenom : David *" required>
+                <input type="email" id="email" placeholder=" Email : david.akagunduz@gmail.com *" required>
+                <input type="text" id="telephone" placeholder=" Téléphone : 0655664488 *" pattern="^(\+33|0)[6-7](\d\d){4}$" required>
+                <input type="text" id="message" placeholder=" Message *" required>
+                <input type="submit" value="Envoyer">
+            </div>
+        </form>
+        
         <div class="separator"></div>
         <div class="bandeau-footer">
 
