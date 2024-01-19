@@ -1,8 +1,18 @@
 @media print {
     @page {
-        margin-top: 0;
+        margin: 0;
     }
+    .CVIMG img{
+        width: 100vw;
+        height: 100vh;
+        
+    }
+    .CVIMG img:last-child {
+        page-break-after: always;
+    }
+
     .no-print {
         display: none;
     }
+     
 }

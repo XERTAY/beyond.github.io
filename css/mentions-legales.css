@@ -1,0 +1,17 @@
+.mentions-legales
+{
+    color: black;
+    background-color: white;
+    padding-bottom: 10%;
+}
+
+.mentions-legales h1
+{
+    font-size: 4rem;
+    padding: 10px 0;
+}
+.mentions-legales h2
+{
+    font-size: 2rem;
+    padding: 10px 0;
+}

@@ -8,7 +8,7 @@ body > :not(.video-opening):not(footer):not(.DownToUp) {
 .video-opening {
     position: relative;
     width: 100%;
-    z-index: 0; /* Assurez-vous que la vidéo est en arrière-plan */
+    z-index: 0;
 }
 
 .video-opening video {
@@ -17,7 +17,7 @@ body > :not(.video-opening):not(footer):not(.DownToUp) {
     height: 100vh;
     object-fit: cover;
     object-position: center;
-    z-index: -1; /* Assurez-vous que la vidéo est en arrière-plan */
+    z-index: -1;
 }
 
 .video-opening h1 {
@@ -44,7 +44,7 @@ body > :not(.video-opening):not(footer):not(.DownToUp) {
     padding: 0;
     margin: 0;
     cursor: pointer;
-    z-index: 1; /* Ensure the button is above other elements */
+    z-index: 1;
     animation: moveUpDown 1s infinite alternate ease-in-out;
 }
 
@@ -68,10 +68,10 @@ body > :not(.video-opening):not(footer):not(.DownToUp) {
 
 .text-img {
     display: grid;
-    justify-content: center; /* Centre les éléments horizontalement */
-    align-items: center; /* Centre les éléments verticalement */
-    grid-template-columns: 1fr; /* Une colonne */
-    grid-template-rows: 1fr; /* Une ligne */
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
 }
 
 .text-img h2
@@ -83,39 +83,38 @@ body > :not(.video-opening):not(footer):not(.DownToUp) {
 }
 
 .img_container {
-    display: grid; /* Utiliser grid pour la .img_container */
-    grid-template-columns: 30% 70%; /* Deux colonnes avec une largeur de 30% et 70% */
-    grid-template-rows: 1fr; /* Une ligne */
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 1fr;
 }
 
 .img_container img {
-    width: 100%; /* 100% de la largeur du conteneur */
-    height: auto; /* Hauteur proportionnelle à la largeur */
+    width: 100%;
+    height: auto;
     object-fit: cover;
 }
 
 .img_container p {
     font-size: 2.5rem;
-    max-width: 100%; /* 100% de la largeur du conteneur */
+    max-width: 100%;
     margin: 50px;
     text-align: justify;
-    line-height: 1.6; /* Ajustez l'interligne selon vos besoins */
+    line-height: 1.6;
 }
 
-/* Inverser l'ordre d'affichage des éléments dans la deuxième .img_container */
 .img_container:nth-child(even) {
     grid-template-columns: 70% 30%;
 }
 
 .img_container:nth-child(even) img {
-    order: 2; /* Met l'image à droite dans la deuxième .img_container */
+    order: 2;
 }
 
 .img_container:nth-child(even) .container_1 img{
-    order: 1; /* Met le paragraphe à gauche dans la deuxième .img_container */
+    order: 1;
 }
 .img_container:nth-child(even) .container_1 p {
-    order: 1; /* Met le paragraphe à gauche dans la deuxième .img_container */
+    order: 1;
 }
 
 .img_container .container_1 button {
@@ -160,16 +159,16 @@ body > :not(.video-opening):not(footer):not(.DownToUp) {
 
 .decouvrir {
     display: flex;
-    flex-direction: column; /* Organise les éléments en colonne */
-    justify-content: center; /* Centre les éléments verticalement */
-    align-items: center; /* Centre les éléments horizontalement */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .decouvrir p {
     font-size: 2.5rem;
     text-align: justify;
     margin: 20px;
-    line-height: 1.6; /* Ajustez l'interligne selon vos besoins */
+    line-height: 1.6;
 }
 
 .button_block {
@@ -191,7 +190,52 @@ body > :not(.video-opening):not(footer):not(.DownToUp) {
     }
 }
 
-@media (max-width:600px) {
+@media (max-width:768px) {
+
+    .text-img h2 {
+        font-size: 3rem;
+    }
+
+    .video-opening h1
+    {
+        font-size: 5rem;
+    }
+
+    .img_container p {
+        font-size: 1rem;
+    }
+    .decouvrir p {
+        font-size: 1rem;
+    }
+
+    .decouvrir video {
+        width: 95%;
+    }
+    .img_container {
+        grid-template-columns: auto;
+    }
+    .img_container:nth-child(2n) {
+        grid-template-columns: auto;
+    }
+    .container_1
+    {
+        display: flex;
+        height: auto;
+    }
+
+    body > :not(.video-opening):not(footer):not(.DownToUp) {
+        margin: 0;
+    }
+
+    .button_block {
+        display: flex;
+        margin: 10px;
+        gap: 10px;
+      }
+
+}
+
+@media (min-width: 769px) and (max-width: 1500px) {
 
     .text-img h2 {
         font-size: 3rem;
@@ -229,75 +273,4 @@ body > :not(.video-opening):not(footer):not(.DownToUp) {
     }
 
 }
-
-@media (max-width:850px) {
-
-    .video-opening h1
-    {
-        font-size: 5rem;
-    }
-
-    .video-opening button
-    {
-        left: 48%;
-    }
-
-    .img_container p {
-        font-size: 1rem;
-    }
-    .decouvrir p {
-        font-size: 1rem;
-    }
-
-    .decouvrir video {
-        width: 95%;
-    }
-    .img_container {
-        grid-template-columns: auto;
-        height: auto;
-    }
-    .img_container:nth-child(2n) {
-        grid-template-columns: auto;
-    }
-
-    .container_1
-    {
-        display: flex;
-        margin: 20px;
-        height: 300px;
-    }
-
-    .container_1 p
-    {
-        padding-bottom: 20px;
-        margin: 20px;
-    }
-    .container_1 button
-    {
-        justify-content: center;
-    }
-    .img_container:nth-of-type(odd) .container_1 {
-        flex-direction: column;
-    }
-
-    .img_container:nth-of-type(odd) .container_1 button {
-        order: 2;
-    }
     
-    .img_container:nth-of-type(even) .container_1 {
-        flex-direction: column-reverse;
-    }
-    .img_container:nth-child(even) .container_1 {
-        order: 2;
-        height: auto;
-    }
-    .img_container:nth-child(even) .container_1 p {
-        order: 2;
-        font-size: 1.2rem;
-    }
-
-    body > :not(.video-opening):not(footer):not(.DownToUp) {
-        margin: 0;
-    }
-    
-}

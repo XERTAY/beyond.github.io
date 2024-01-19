@@ -1,15 +1,17 @@
+/* BEYOND LIFE */
+
 .img_affiche {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Deux colonnes égales */
-    gap: 20px; /* Espace entre les colonnes */
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }
 
 .play {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; /* Centre horizontalement et verticalement */
-    height: 100%; /* Remplit la hauteur du conteneur parent */
+    align-items: center;
+    height: 100%;
 }
 
 .play h1 {
@@ -17,13 +19,13 @@
 }
 
 .play a {
-    margin-top: 10px; /* Marge entre le h1 et le lien */
+    margin-top: 10px;
 }
 
 img {
     width: 100%;
     height: 600px;
-    object-fit: cover; /* Ajuste la taille de l'image tout en conservant les proportions */
+    object-fit: cover;
 }
 
 /* DOWNLOAD BEYOND LIFE */
@@ -31,7 +33,7 @@ img {
 .img_title {
     position: relative;
     height: 700px;
-    overflow: hidden; /* Masque le dépassement d'image en dehors du conteneur */
+    overflow: hidden;
 }
 
 .img_title::before {
@@ -41,8 +43,8 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* Ajoutez votre couleur et opacité ici */
-    z-index: 1; /* Assurez-vous que la superposition est au-dessus de l'image */
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
 }
 
 .img_title .image-container img {
@@ -50,41 +52,41 @@ img {
     height: auto;
     height: 100%;
     display: block;
-    z-index: 2; /* Assurez-vous que l'image est au-dessus de la superposition */
+    z-index: 2;
 }   
 
 .img_title h1 {
     font-size: 8rem;
     position: absolute;
-    top: 150px; /* Marge de 150px en haut */
-    left: 50px; /* Marge de 50px à gauche */
-    margin: 0; /* Supprime la marge par défaut du h1 */
-    color: white; /* Couleur du texte */
+    top: 150px;
+    left: 50px;
+    margin: 0;
+    color: white;
     z-index: 3;
 }
 
 .download_text {
     margin: 50px;
-    text-align: center; /* Centre le texte horizontalement */
+    text-align: center;
 }
 
 .download_text p {
-    margin-bottom: 20px; /* Marge en bas du paragraphe */
+    margin-bottom: 20px;
     font-size: 1.5rem;
     text-align: justify;
 }
 
 .download_text a {
-    display: inline-block; /* Permet aux liens d'être sur la même ligne */
-    margin-right: 10px; /* Marge entre les deux boutons */
-    padding: 10px 20px; /* Rembourrage pour un meilleur aspect visuel */
+    display: inline-block;
+    margin-right: 10px;
+    padding: 10px 20px;
     text-decoration: none;
-    color: #fff; /* Couleur du texte */
-    background-color: #007bff; /* Couleur de fond du bouton */
+    color: #fff;
+    background-color: #007bff;
 }
 
 .download_text a:hover {
-    background-color: #0056b3; /* Couleur de fond du bouton au survol */
+    background-color: #0056b3;
 }
 
 .frames:first-child
@@ -114,7 +116,7 @@ img {
 
 .frame p {
     max-width: 100%;
-    height: 150px; /* Définissez la hauteur souhaitée pour le paragraphe */
+    height: auto;
     overflow: hidden;
     text-align: justify;
     margin: 0 10px 0 10px;
@@ -124,10 +126,94 @@ img {
 .frame img {
     width: 500px;
     height: 300px;
-    object-fit: cover; /* Ajuste la taille de l'image tout en conservant les proportions */
+    object-fit: cover;
 }
 
 @media (max-width: 768px) {
+
+    .img_affiche {
+        height: auto;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        text-align: center;
+    }
+
+    .img_affiche::before {
+        content: ""; /* Fond d'image */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('images/paysage_bg.jpg');
+        background-size: cover; 
+        background-position: center;
+        z-index: 1;
+    }
+
+    .img_affiche .play {
+        z-index: 2;
+    }
+
+    .img_affiche h1 {
+        font-size: 4rem;
+        color: white;
+        z-index: 2;
+    }
+
+    .img_affiche img
+    {
+        height: 40vh;
+    } 
+
+    /* Styles pour le bouton */
+    .buy_button {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        text-decoration: none;
+        color: #fff;
+        background-color: #007bff;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+
+    .buy_button:hover {
+        background-color: #0056b3;
+    }
+
+    .frames:first-child
+    {
+        flex-direction: column;
+    }
+
+    .frames:first-child .frame {
+        margin: 20px 10px;
+    }
+
+    .frames:last-child .frame {
+        margin: 20px 10px;
+    }
+    .frames:last-child .frame p{
+        font-size: 1.2rem;
+        height: auto;
+    }
+
+    .frames:first-child .frame p 
+    {
+        font-size: 1.2rem;
+    }
+
+    .frames:first-child .frame img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+
+     /* DOWNLOAD BEYOND */
 
     .img_title h1 {
         font-size: 4rem;
@@ -141,9 +227,97 @@ img {
       .img_title .image-container img {
         height: 90vh;
       }
+
 }
 
 @media (min-width: 769px) and (max-width: 1500px) {
+
+    /* BEYOND LIFE */
+
+    .img_affiche {
+        height: auto;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        text-align: center;
+    }
+
+    .img_affiche::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('images/paysage_bg.jpg'); 
+        background-size: cover;
+        background-position: center;
+        z-index: 1;
+    }
+
+    .img_affiche .play {
+        z-index: 2;
+    }
+
+    .img_affiche h1 {
+        font-size: 4rem;
+        color: white;
+        z-index: 2;
+    }
+
+    .img_affiche img
+    {
+        height: 40vh;
+    } 
+
+    /* Styles pour le bouton */
+    .buy_button {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        text-decoration: none;
+        color: #fff;
+        background-color: #007bff;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+
+    .buy_button:hover {
+        background-color: #0056b3;
+    }
+
+    .frames:first-child
+    {
+        flex-direction: column;
+    }
+
+    .frames:first-child .frame {
+        margin: 20px 10px;
+    }
+
+    .frames:last-child .frame {
+        margin: 20px 10px;
+    }
+    .frames:last-child .frame p{
+        font-size: 1.2rem;
+        height: auto;
+    }
+
+    .frames:first-child .frame p 
+    {
+        font-size: 1.2rem;
+    }
+
+    .frames:first-child .frame img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    /* DOWNLOAD BEYOND LIFE */
+
 
     .img_title h1 {
         font-size: 4rem;

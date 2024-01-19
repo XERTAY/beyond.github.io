@@ -4,80 +4,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/navfooter.css">
+    <link rel="stylesheet" href="css/apropos.css">
+    <link rel="stylesheet" href="css/print.css">
     <title>BEYOND | APROPOS</title>
 </head>
 <body>
-    <nav>
-        <div class="openMenu">
-            <button>
-                &#x2630;
+    <div class="no-print">
+        <nav>
+            <div class="openMenu">
+                <button>
+                    &#x2630;
+                </button>
+            </div>
+
+            <ul class="mainMenu">
+                <li><a href="./index.html">Accueil</a></li>
+                <li><a href="./logiciels.html">Nos Logiciels</a></li>
+                <li><a href="./beyondlife.html">Beyond Life</a></li>
+                <li><a href="./boutique.html">Boutique</a></li>
+                <li><a href="./apropos.html">A Propos</a></li>
+                <li><div class="closeMenu"><p>&#x2716;</p></div></li>
+                <li>
+                    <span class="icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-brands fa-x-twitter"></i>
+                        <i class="fab fa-github"></i>
+                    </span>
+                </li>
+            </ul>
+        </nav>
+        <div class="CV">
+            <h1>Les Créateurs de notre entreprise</h1>
+        </div>
+    </div>
+        <div class="CVIMG">
+            <div class="no-print">
+                <h2>Vincent Teissier</h2>
+            </div>
+            <div class="print">
+                <img src="CV/CV3.jpg" alt="">
+            </div>
+        </div>
+        <div class="CVIMG">  
+            <div class="no-print">
+                <h2>David Akagunduz</h2>
+            </div>
+            <div class="print">
+                <img src="CV/CV2.jpg" alt="">
+            </div>
+        </div>
+        <div class="CVIMG">
+            <div class="no-print">
+                <h2>Othmane Belmadani</h2>
+            </div>
+            <div class="print">
+                <img src="CV/CV1.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="no-print">
+        <div class="DownToUp" id="scrollButton">
+            <button onclick="scrollToTop()">
+                <i class="arrow"></i>
             </button>
         </div>
 
-        <ul class="mainMenu">
-            <li><a href="./index.html">Accueil</a></li>
-            <li><a href="./logiciels.html">Nos Logiciels</a></li>
-            <li><a href="./beyondlife.html">Beyond Life</a></li>
-            <li><a href="./boutique.html">Boutique</a></li>
-            <li><a href="./apropos.html">A Propos</a></li>
-            <li><div class="closeMenu"><p>&#x2716;</p></div></li>
-            <li>
-                <span class="icons">
-                    <i class="fab fa-facebook"></i>
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-brands fa-x-twitter"></i>
-                    <i class="fab fa-github"></i>
-                </span>
-            </li>
-        </ul>
-    </nav>
+        <footer>
+            <h2>Contactez-nous</h2>
+            <div class="boutons">
+                <a class="footer-button" href="./apropos.html">A propos</a>
+            </div>
+            <form onsubmit="return validateForm()">
+                <div class="inputs">
+                    <input type="text" id="nom" placeholder=" Nom * (exemple : AKAGUNDUZ)" required>
+                    <input type="text" id="prenom" placeholder=" Prenom * (exemple : David)" required>
+                    <input type="email" id="email" placeholder=" Email * (exemple : david.akagunduz@gmail.com)" required>
+                    <input type="text" id="telephone" placeholder=" Téléphone (exemple : 0655664488)" pattern="^(\+33|0)[6-7](\d\d){4}$" required>
+                    <input type="text" id="message" placeholder=" Message *" required>
+                    <input type="submit" value="Envoyer">
+                </div>
+            </form>
+            
+            <div class="separator"></div>
+            <div class="bandeau-footer">
+    
+                <div class="left-footer">
+                    <a href="./mentions-legales.html">Mentions légales</a>
+                </div>
+    
+                <div class="right-footer">
+                    <a href="https://www.instagram.com/beyondsaeiutfbleau/"><img src="./images/instagram.png" alt=""></a>
+                    <a href="https://www.youtube.com/channel/UC8lIzl4vrR9G-kNF3ROVbdw"><img src="./images/youtube.png" alt=""></a>
+                    <a href="https://twitter.com/BEYOND1045166"><img src="./images/X.png" alt=""></a>
+                </div>
+            </div>
+    
+        </footer>
 
-    <div class="DownToUp" id="scrollButton">
-        <button onclick="scrollToTop()">
-            <i class="arrow"></i>
-        </button>
+        <script src="js/scrollsection.js"></script>
+        <script src="js/nav.js"></script>
+        <script src="js/scrolltop.js"></script>
     </div>
-
-    <footer>
-        <h2>Contactez-nous</h2>
-        <div class="boutons">
-            <a href="#" class="Button">Découvrir</a>
-            <a href="#" class="Button">Découvrir</a>
-            <a href="#" class="Button">Découvrir</a>
-        </div>
-        <form onsubmit="return validateForm()">
-            <div class="inputs">
-                <input type="text" id="nom" placeholder=" Nom : AKAGUNDUZ *" required>
-                <input type="text" id="prenom" placeholder=" Prenom : David *" required>
-                <input type="email" id="email" placeholder=" Email : david.akagunduz@gmail.com *" required>
-                <input type="text" id="telephone" placeholder=" Téléphone : 0655664488 *" pattern="^(\+33|0)[6-7](\d\d){4}$" required>
-                <input type="text" id="message" placeholder=" Message *" required>
-                <input type="submit" value="Envoyer">
-            </div>
-        </form>
-        
-        <div class="separator"></div>
-        <div class="bandeau-footer">
-
-            <div class="left-footer">
-                <a href="">Mentions légales</a>
-            </div>
-
-            <div class="right-footer">
-                <a href="">I</a>
-                <a href="">Y</a>
-                <a href="">X</a>
-                <a href="">T</a>
-                <a href="">D</a>
-                <a href="">Langue</a>
-            </div>
-        </div>
-
-    </footer>
-
-    <script src="js/scrollsection.js"></script>
-    <script src="js/nav.js"></script>
-    <script src="js/scrolltop.js"></script>
-
 </body>
 </html>

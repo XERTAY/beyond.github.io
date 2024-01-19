@@ -7,8 +7,8 @@
     display: grid;
     grid-template-columns: 40% 60%;
     background-image: url('/images/banner_gaming.png');
-    background-size: cover; /* This will make the image cover the entire div */
-    background-position: center; /* This will center the image within the div */
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     margin: 0 15%;
     
@@ -22,7 +22,7 @@
 
 .logos {
     display: flex;
-    align-items: center; /* Centre les éléments verticalement */
+    align-items: center;
     margin-bottom: 20%;
 }
 
@@ -36,13 +36,13 @@
 .accroche_text {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centrer les enfants verticalement */
+    justify-content: center;
     margin-top: 50% ;
     margin-bottom: 20%;
 }
 
 .accroche_text h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .accroche_text h3 {
@@ -58,6 +58,11 @@
 .accroche_text a
 {
     margin-left: 20px;
+}
+
+.buttons a
+{
+    margin-bottom: 10px;
 }
 
 /* CONTAINER */
@@ -98,7 +103,7 @@
     align-items: center;
     justify-content: space-between;
     background-color: rgba(255, 255, 255, 0.1);
-    width: 100%;
+    width: auto;
     border-radius: 25px;
     padding: 2em;
     position: relative;
@@ -126,8 +131,8 @@
     text-align: justify;
     margin-bottom: 1em;
     font-style: italic;
-    font-size: 1em;
-    height: 20px;
+    font-size: 2rem;
+    height: auto;
 }
 
 .container_items img {
@@ -212,7 +217,7 @@
     bottom: 0;
     background-color: #ccc;
     transition: .4s;
-    border-radius: 34px; /* Rounded corners for the slider */
+    border-radius: 34px;
 }
 
 .slider:before {
@@ -224,7 +229,7 @@
     bottom: 4px;
     background-color: white;
     transition: .4s;
-    border-radius: 50%; /* Rounded corners for the slider knob */
+    border-radius: 50%;
 }
 
 /* Rounded sliders */
@@ -331,7 +336,7 @@
     -webkit-transform: rotate(45deg);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 850px) {
 
     body > :not(.container):not(footer):not(.DownToUp):not(.accroche) {
         margin: 0;
@@ -393,6 +398,7 @@
 
       .accroche_text p{
         text-align: justify;
+        height: auto;
       }
 
 }

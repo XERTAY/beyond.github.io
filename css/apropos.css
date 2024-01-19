@@ -1,0 +1,44 @@
+.CV h1{
+    text-align: center;
+    width: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.CVIMG h2{
+    text-align: center;
+    width: auto;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.CVIMG {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 50%;
+    border-radius: 25px;
+    padding: 2em;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+}
+
+.CVIMG img{
+    display: flex;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.IMG-container{
+    margin-right: 100px;
+    overflow: auto;
+    border-radius: 60%; 
+    margin-bottom: 20px;
+}
+
